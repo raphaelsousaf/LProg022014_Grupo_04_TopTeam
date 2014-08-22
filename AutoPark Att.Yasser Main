@@ -1,0 +1,89 @@
+package autopark;
+
+
+import java.util.Scanner;
+
+
+public class AutoPark {
+    
+    
+    public static void main(String[] args) {
+        String modelo , placa ,tipo ;
+        float horarioentrada,horariosaida;
+        int opc=0;
+        float tempo;
+        float custo;
+        Scanner leitor  = new Scanner(System.in); 
+        System.out.print( "Bem Vindo ao Auto Park:'\n'" );
+        System.out.print( "Escoha as opcoes:'\n'" );
+        System.out.print( "1.Cadastrar Veiculo:'\n'" );
+        System.out.print( "2.Calcular Tempo e custo:'\n'" );
+        System.out.print( "3.Encerrar programa:'\n'" );
+        
+        System.out.print( "Escoha uma das opcoes:'\n'" );
+        opc = leitor.nextInt();
+        
+                if (opc==1) {
+                    System.out.print( "Cadastrar Veiculo:'\n'" );
+                    System.out.print( "Digite a placa do Veiculo:'\n'" );
+                    placa = leitor.next();
+                    System.out.print( "Digite o modelo do veiculo:'\n'" );
+                    modelo = leitor.next();
+                    System.out.print( "Digite o tipo do veiculo:'\n'" );
+                    tipo = leitor.next();
+                    
+                    Veiculo veiculo= new Veiculo(modelo, placa);
+                    Veiculo veiculo1 = new Veiculo(tipo);
+                    
+                    System.out.print( "Informacoes do Veiculo:'\n'" );
+                    System.out.print( " A placa do Veiculo e:'\n'" );
+                    System.out.println(placa);
+                    System.out.print( " O modelo do veiculo e:'\n'" );
+                    System.out.println(modelo);
+                     System.out.print( " O tipo do veiculo e:'\n'" );
+                    System.out.println(tipo);
+                                  
+                            
+            
+        }
+        
+           if (opc==2) {
+               
+               
+               
+               System.out.print( "Digite o horario de entrada do veiculo:'\n'" );
+                    horarioentrada = leitor.nextFloat();
+                    System.out.print( "Digite o horario de saida do veiculo:'\n'" );
+                    horariosaida = leitor.nextFloat();
+                    System.out.print( " horario de entrada e:'\n'" );
+                    System.out.println(horarioentrada);
+                    System.out.print( " O horario  de saida  e:'\n'" );
+                    System.out.println(horariosaida);
+                    
+                    if (horarioentrada<horariosaida) {
+                        
+                        tempo = (horariosaida - horarioentrada);
+                        custo = (tempo*4);
+                        System.out.print( "Tempo de utilização do estacionamento foi de :"+tempo );
+                        System.out.print( "Portanto o Custo e :"+custo );
+                   
+               }
+                    
+                    if (opc==3) {
+                        
+                        System.exit(0);
+                        
+
+
+}  
+                        
+                   
+               
+                    
+            
+           }
+     
+           }
+        
+           }
+
